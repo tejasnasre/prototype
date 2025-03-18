@@ -9,7 +9,7 @@ const MPLUSCodeLatin = M_PLUS_Code_Latin({
 export const metadata: Metadata = {
   title: "Prototype 2.0",
   description:
-    "8+ hpurs of hackathon to build a prototype. Stay tuned for more updates.",
+    "8+ hours of hackathon to build a prototype. Stay tuned for more updates.",
 };
 
 export default function RootLayout({
