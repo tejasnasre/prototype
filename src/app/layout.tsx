@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { M_PLUS_Code_Latin } from "next/font/google";
 import "./globals.css";
+import NavbarDemo from "@/components/Navbar";
 
 const MPLUSCodeLatin = M_PLUS_Code_Latin({
   subsets: ["latin"],
@@ -19,7 +20,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${MPLUSCodeLatin.className} dark`}>{children}</body>
+      <body className={`${MPLUSCodeLatin.className} dark`}>
+        <NavbarDemo />
+        {children}
+      </body>
     </html>
   );
 }
