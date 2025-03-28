@@ -1,9 +1,19 @@
 @import "tailwindcss";
 
 @plugin "tailwindcss-animate";
-
+@import url('https://fonts.googleapis.com/css2?family=Over+the+Rainbow&display=swap');
 @custom-variant dark (&:is(.dark *));
+.font-over-the-rainbow {
+  font-family: 'Over the Rainbow', cursive;
+}
 
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-position: top center;
+}
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -120,4 +130,11 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-position: top center;
 }

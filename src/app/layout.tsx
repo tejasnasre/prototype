@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
 import { M_PLUS_Code_Latin } from "next/font/google";
 import "./globals.css";
-import NavbarDemo from "@/components/Navbar";
-
+import Navbar from "@/components/Navbar";
+import { Over_the_Rainbow } from 'next/font/google';
 const MPLUSCodeLatin = M_PLUS_Code_Latin({
   subsets: ["latin"],
+});
+const overTheRainbow = Over_the_Rainbow({ 
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-over-the-rainbow', 
 });
 
 export const metadata: Metadata = {
@@ -20,9 +25,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${MPLUSCodeLatin.className} dark`}>
-        <NavbarDemo />
-        {children}
+      <body className={`${MPLUSCodeLatin.className} dark ${overTheRainbow.variable}`} suppressHydrationWarning>
+        <div className="fixed inset-0 z-[-1] page-background"></div>
+        <Navbar />
+        <main className="pt-24 min-h-screen">
+          {children}
+        </main>
       </body>
     </html>
   );
