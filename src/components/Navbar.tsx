@@ -9,7 +9,7 @@ const navLinks = [
   { name: "Timeline", href: "/timeline" },
   { name: "Tracks", href: "#tracks" },
   { name: "Prizes", href: "/perks" },
-  { name: "FAQ", href: "#faq" },
+  { name: "FAQ", href: "/faqs" },
 ]
 
 const Navbar = () => {
