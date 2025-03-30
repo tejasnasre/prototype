@@ -77,7 +77,7 @@ export default function Home() {
                       ">
                         Register Now
                       </button>
-                      
+                      <Link href="/about">
                       <button className="
                         backdrop-blur-sm bg-white/5 
                         border border-white/10
@@ -90,6 +90,7 @@ export default function Home() {
                         </svg>
                         Learn More
                       </button>
+                      </Link>
                     </motion.div>
                   </div>
                 </motion.div>
