@@ -105,7 +105,7 @@ const Footer = () => {
 
           {/* Made with love section */}
           <motion.div 
-            className="text-white/80 text-lg font-over-the-rainbow flex items-center justify-center flex-wrap gap-1"
+            className="text-white/80 text-2xl font-over-the-rainbow flex items-center justify-center flex-wrap gap-1"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -116,7 +116,7 @@ const Footer = () => {
             </svg>
             <span>by</span>
             <a 
-              href="https://github.com/sohamkhedkar" 
+              href="https://github.com/soham-khedkar" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-[#6c63ff] hover:text-[#ff6584] transition-all duration-300"

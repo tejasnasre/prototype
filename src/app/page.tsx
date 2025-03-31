@@ -97,7 +97,7 @@ export default function Home() {
                     </motion.p>
                     
                     <motion.p 
-                      className="text-sm sm:text-base md:text-lg mb-6 sm:mb-8 font-over-the-rainbow text-[#ff8ca0]"
+                      className="text-lg sm:text-base md:text-2xl mb-6 sm:mb-8 font-over-the-rainbow text-[#ff8ca0]"
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6, delay: 0.7 }}
@@ -121,7 +121,7 @@ export default function Home() {
                       ">
                         Register Now
                       </button>
-                      <Link href="/about">
+                      <Link href="/about" className='w-full sm:w-auto'>
                       <button className="
                         backdrop-blur-sm bg-white/5 
                         border border-white/10
@@ -129,6 +129,7 @@ export default function Home() {
                         hover:bg-white/10 transition-all
                         flex items-center justify-center gap-2
                         text-sm sm:text-base
+                        w-full
                       ">
                         <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />

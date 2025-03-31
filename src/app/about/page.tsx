@@ -1,53 +1,15 @@
 'use client'
 import React, { useEffect } from 'react'
 import { motion, useAnimation, useInView } from 'framer-motion'
-import ImageCarousel from '@/components/animata/image-carousel'
+import EmblaCarousel from '@/components/EmblaCarousel'
 import { 
   ArrowRight, 
   HeartPulse, 
   Sun
 } from 'lucide-react'
-// import MovingGradient from "@/components/animata/background/moving-gradient"
-// import { cn } from "@/lib/utils"
 import Link from 'next/link'
 import { useRef } from 'react'
 import Footer from '@/components/footer'
-
-// BentoCard component from eight.tsx
-// function BentoCard({
-//   title,
-//   icon,
-//   description,
-//   children,
-//   gradient,
-//   className,
-// }: {
-//   children?: React.ReactNode;
-//   title: React.ReactNode;
-//   icon: React.ReactNode;
-//   gradient?: string;
-//   description: React.ReactNode;
-//   className?: string;
-// }) {
-//   return (
-//     <MovingGradient
-//       animated={false}
-//       className={cn("rounded-md", className)}
-//       gradientClassName={cn("opacity-10", gradient)}
-//     >
-//       <section className="flex h-full flex-col gap-2 p-4">
-//         <header>
-//           <div className="mb-2 flex items-center gap-2">
-//             {icon}
-//             <p className="text-md line-clamp-1 font-bold">{title}</p>
-//           </div>
-//         </header>
-//         <div className="flex-1 text-sm font-medium text-opacity-80">{description}</div>
-//         {children}
-//       </section>
-//     </MovingGradient>
-//   );
-// }
 
 export default function About() {
   // Refs for scroll animations
@@ -113,7 +75,7 @@ export default function About() {
         
         {/* About Container with Grid Background */}
         <motion.div 
-          className="relative overflow-hidden rounded-3xl p-1 mb-24"
+          className="relative overflow-hidden rounded-3xl p-1 mb-12 sm:mb-24"
           style={{
             background: "linear-gradient(135deg, #ff6584 0%, #43e97b 100%)",
           }}
@@ -124,20 +86,21 @@ export default function About() {
           <div className="absolute inset-0 bg-grid-pattern opacity-30"></div>
           
           <div className="bg-[#030014]/80 backdrop-blur-lg rounded-2xl overflow-hidden relative z-10">
-            <div className="grid md:grid-cols-2 gap-10 p-8 md:p-12 lg:p-16">
-              {/* Left Content - About Text */}
+            {/* Changed to flex-col for better content flow */}
+            <div className="flex flex-col gap-6 md:gap-10 p-6 sm:p-8 md:p-12 lg:p-16">
+              {/* Left Content - Centered Text Content */}
               <motion.div 
                 ref={textRef}
-                className="flex flex-col justify-center space-y-8"
+                className="flex flex-col items-center text-center justify-center space-y-6 sm:space-y-8 mx-auto max-w-3xl"
                 initial="hidden"
                 animate={textControls}
                 variants={{
-                  hidden: { opacity: 0, x: -30 },
-                  visible: { opacity: 1, x: 0, transition: { duration: 0.8, delay: 0.2 } }
+                  hidden: { opacity: 0, y: 30 },
+                  visible: { opacity: 1, y: 0, transition: { duration: 0.8, delay: 0.2 } }
                 }}
               >
                 <motion.div
-                  className="inline-block px-4 py-1.5 mb-2 text-sm md:text-base font-medium rounded-full bg-white/5 border border-white/10 text-[#ff6584] w-fit"
+                  className="inline-block px-3 sm:px-4 py-1 sm:py-1.5 mb-1 sm:mb-2 text-sm font-medium rounded-full bg-white/5 border border-white/10 text-[#ff6584] w-fit"
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.5 }}
@@ -146,7 +109,7 @@ export default function About() {
                 </motion.div>
                 
                 <motion.h3 
-                  className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6"
+                  className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-6"
                   variants={{
                     hidden: { opacity: 0 },
                     visible: { 
@@ -159,7 +122,7 @@ export default function About() {
                 </motion.h3>
                 
                 <motion.div 
-                  className="space-y-6 text-white/80 text-xl md:text-2xl leading-relaxed"
+                  className="space-y-4 sm:space-y-6 text-white/80 text-base sm:text-xl md:text-2xl leading-relaxed"
                   variants={{
                     hidden: { opacity: 0 },
                     visible: { 
@@ -170,33 +133,24 @@ export default function About() {
                 >
                   <motion.p
                     variants={{
-                      hidden: { opacity: 0, y: 20 },
-                      visible: { opacity: 1, y: 0 }
+                      hidden: { opacity: 0 },
+                      visible: { opacity: 1 }
                     }}
                   >
-                    <span className="text-[#43e97b] font-semibold">Prototype 2.0</span> is our flagship hackathon where participants build a working MVP based on a given problem statement in just 8 hours.
+                    Prototype 2.0 is GHRCEMN&apos;s premier hackathon where students come together to build innovative solutions to real-world problems in just 8 hours.
                   </motion.p>
                   
                   <motion.p
                     variants={{
-                      hidden: { opacity: 0, y: 20 },
-                      visible: { opacity: 1, y: 0 }
+                      hidden: { opacity: 0 },
+                      visible: { opacity: 1 }
                     }}
                   >
-                    Each team will receive mentorship from industry experts, access to cutting-edge tools and APIs, and the opportunity to showcase their creation to a panel of judges.
-                  </motion.p>
-                  
-                  <motion.p
-                    variants={{
-                      hidden: { opacity: 0, y: 20 },
-                      visible: { opacity: 1, y: 0 }
-                    }}
-                  >
-                    The best solutions will win from our prize pool of <span className="font-semibold gradient-text">₹10,000</span> along with exclusive internship opportunities and tech goodies.
+                    Whether you&apos;re a coding expert or just starting out, this is your chance to showcase your skills, learn new technologies, and connect with like-minded individuals.
                   </motion.p>
                   
                   <motion.h4 
-                    className="font-semibold text-2xl mt-8"
+                    className="font-semibold text-xl sm:text-2xl mt-4 sm:mt-8"
                     variants={{
                       hidden: { opacity: 0, y: 20 },
                       visible: { opacity: 1, y: 0 }
@@ -206,7 +160,7 @@ export default function About() {
                   </motion.h4>
                   
                   <motion.ul 
-                    className="list-disc pl-6 space-y-3 text-xl"
+                    className="list-disc space-y-2 sm:space-y-3 text-base sm:text-xl mx-auto text-left pl-4 sm:pl-6"
                     variants={{
                       hidden: { opacity: 0 },
                       visible: { 
@@ -221,7 +175,7 @@ export default function About() {
                         visible: { opacity: 1, x: 0 }
                       }}
                     >
-                      Challenging problem statements based on real-world issues
+                      An intensive <span className="text-[#ff6584] font-medium">8-hour coding sprint</span> with real-world challenges
                     </motion.li>
                     <motion.li
                       variants={{
@@ -229,7 +183,7 @@ export default function About() {
                         visible: { opacity: 1, x: 0 }
                       }}
                     >
-                      Networking with like-minded tech enthusiasts
+                      Expert mentorship from industry professionals throughout the event
                     </motion.li>
                     <motion.li
                       variants={{
@@ -237,7 +191,7 @@ export default function About() {
                         visible: { opacity: 1, x: 0 }
                       }}
                     >
-                      Technical workshops and lightning talks
+                      Networking opportunities with fellow developers and tech companies
                     </motion.li>
                     <motion.li
                       variants={{
@@ -245,7 +199,7 @@ export default function About() {
                         visible: { opacity: 1, x: 0 }
                       }}
                     >
-                      Swag kits and refreshments throughout the event
+                      Cash prizes totaling ₹10,000 and potential internship opportunities
                     </motion.li>
                     <motion.li
                       variants={{
@@ -253,15 +207,15 @@ export default function About() {
                         visible: { opacity: 1, x: 0 }
                       }}
                     >
-                      Certificate of participation for all attendees
+                      A supportive environment that encourages innovation and creativity
                     </motion.li>
                   </motion.ul>
                 </motion.div>
                 
                 <motion.button 
-                  className="bg-gradient-to-r from-[#ff6584] to-[#43e97b] px-10 py-4 rounded-lg font-medium text-white text-lg
+                  className="bg-gradient-to-r from-[#ff6584] to-[#43e97b] px-6 sm:px-10 py-3 sm:py-4 rounded-lg font-medium text-white text-base sm:text-lg
                   hover:shadow-lg hover:shadow-[#ff6584]/20 transition-all scale-100 hover:scale-105 duration-300
-                  border border-white/10 mt-6 w-fit"
+                  border border-white/10 mt-4 sm:mt-6"
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.9 }}
@@ -273,19 +227,21 @@ export default function About() {
                 </motion.button>
               </motion.div>
               
-              {/* Right Content - Image Carousel */}
+              {/* Carousel below the text content - centered design */}
               <motion.div
-                className="flex items-center justify-center"
-                initial={{ opacity: 0, x: 30 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.5 }}
+                className="flex items-center justify-center mt-8 w-full"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.7 }}
               >
-                <div className="relative w-full h-full flex items-center justify-center">
-                  <div className="absolute w-72 h-72 rounded-full bg-[#43e97b]/20 blur-3xl -top-10 -right-10"></div>
-                  <div className="absolute w-52 h-52 rounded-full bg-[#ff6584]/20 blur-3xl -bottom-10 -left-10"></div>
+                <div className="relative w-full flex items-center justify-center">
+                  {/* Decorative blur elements */}
+                  <div className="absolute w-48 sm:w-72 h-48 sm:h-72 rounded-full bg-[#43e97b]/20 blur-3xl -top-10 right-0 sm:-right-10"></div>
+                  <div className="absolute w-36 sm:w-52 h-36 sm:h-52 rounded-full bg-[#ff6584]/20 blur-3xl -bottom-10 left-0 sm:-left-10"></div>
                   
-                  <div className="relative z-10 w-full max-w-md mx-auto">
-                    <ImageCarousel items={carouselItems} />
+                  {/* Carousel container - centered */}
+                  <div className="relative z-10 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto">
+                    <EmblaCarousel items={carouselItems} />
                   </div>
                 </div>
               </motion.div>
@@ -421,88 +377,6 @@ export default function About() {
               </div>
             </div>
           </div>
-          
-          {/* Bento Grid Component from eight.tsx */}
-          {/* <motion.div 
-            ref={bentoGridRef}
-            className="mt-16"
-            initial="hidden"
-            animate={bentoGridControls}
-            variants={{
-              hidden: { opacity: 0, y: 40 },
-              visible: { opacity: 1, y: 0 }
-            }}
-          >
-            <motion.h3 
-              className="text-3xl md:text-4xl font-bold mb-8 text-center"
-              variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0 }
-              }}
-            >
-              Why Participate
-            </motion.h3>
-            
-            <div className="grid grid-cols-1 gap-4 text-white sm:grid-cols-3 lg:grid-cols-3">
-              <BentoCard
-                title="Career Growth"
-                icon={<BarChart size={24} className="text-[#ff6584]" />}
-                description={<span>Showcase your skills to potential employers and add a valuable achievement to your resume.</span>}
-                className="sm:col-span-1 sm:row-span-2"
-                gradient="from-purple-900 via-60% via-pink-600 to-red-600"
-              >
-                <div className="group relative flex cursor-pointer flex-col justify-end rounded-md bg-zinc-950/50 p-2 text-xl tracking-tight text-gray-100 md:text-2xl mt-2">
-                  <div className="font-light">Build Your</div>
-                  <div className="-mt-1 font-bold">Portfolio</div>
-                  <div className="flex h-6 w-6 items-center justify-center rounded-full border bg-white/90 transition-all duration-700 group-hover:rotate-[360deg] md:h-7 md:w-7">
-                    <ArrowRight size={14} className="text-[#ff6584]" />
-                  </div>
-                </div>
-              </BentoCard>
-
-              <BentoCard
-                title="Network with Peers"
-                icon={<GitBranch size={24} className="text-[#43e97b]" />}
-                description="Connect with fellow tech enthusiasts, mentors, and industry leaders."
-                gradient="from-green-400 via-60% via-emerald-300 to-teal-200"
-                className="group sm:col-span-1"
-              >
-                <div className="h-3 w-full rounded-sm bg-gray-100/30 group-hover:animate-pulse mt-2" />
-                <div className="h-3 w-1/2 rounded-sm bg-gray-100/30 group-hover:animate-pulse mt-1" />
-              </BentoCard>
-
-              <BentoCard
-                title="Learn New Technologies"
-                icon={<LineChart size={24} className="text-[#6c63ff]" />}
-                description="Gain hands-on experience with cutting-edge tools and frameworks."
-                gradient="from-blue-300 via-60% via-indigo-200 to-purple-200"
-                className="group sm:col-span-1"
-              >
-                <div className="flex w-full flex-row justify-end gap-2 rounded border-blue-900/20 bg-blue-900/10 p-2 mt-2">
-                  <HeartPulse
-                    size={16}
-                    className="text-white/70 delay-150 duration-75 group-hover:animate-in group-hover:slide-in-from-right-full"
-                  />
-                  <Sun
-                    size={16}
-                    className="text-white/70 delay-75 duration-75 group-hover:animate-in group-hover:slide-in-from-right-full"
-                  />
-                  <BookPlus
-                    size={16}
-                    className="text-white/70 duration-75 group-hover:animate-in group-hover:slide-in-from-right-full"
-                  />
-                </div>
-              </BentoCard>
-
-              <BentoCard
-                title="Win Exciting Prizes"
-                icon={<TypeIcon size={24} className="text-yellow-400" />}
-                description="Compete for cash prizes, tech gadgets, and exclusive internship opportunities."
-                gradient="from-yellow-300 via-60% via-amber-200 to-orange-200"
-                className="sm:col-span-2"
-              />
-            </div>
-          </motion.div> */}
         </motion.div>
       </motion.div>
     </div>
