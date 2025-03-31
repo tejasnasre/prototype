@@ -5,53 +5,49 @@ import ImageCarousel from '@/components/animata/image-carousel'
 import { 
   ArrowRight, 
   HeartPulse, 
-  Sun, 
-  BookPlus, 
-  BarChart, 
-  GitBranch, 
-  LineChart, 
-  TypeIcon 
+  Sun
 } from 'lucide-react'
 import MovingGradient from "@/components/animata/background/moving-gradient"
 import { cn } from "@/lib/utils"
 import Link from 'next/link'
 import { useRef } from 'react'
+import Footer from '@/components/footer'
 
 // BentoCard component from eight.tsx
-function BentoCard({
-  title,
-  icon,
-  description,
-  children,
-  gradient,
-  className,
-}: {
-  children?: React.ReactNode;
-  title: React.ReactNode;
-  icon: React.ReactNode;
-  gradient?: string;
-  description: React.ReactNode;
-  className?: string;
-}) {
-  return (
-    <MovingGradient
-      animated={false}
-      className={cn("rounded-md", className)}
-      gradientClassName={cn("opacity-10", gradient)}
-    >
-      <section className="flex h-full flex-col gap-2 p-4">
-        <header>
-          <div className="mb-2 flex items-center gap-2">
-            {icon}
-            <p className="text-md line-clamp-1 font-bold">{title}</p>
-          </div>
-        </header>
-        <div className="flex-1 text-sm font-medium text-opacity-80">{description}</div>
-        {children}
-      </section>
-    </MovingGradient>
-  );
-}
+// function BentoCard({
+//   title,
+//   icon,
+//   description,
+//   children,
+//   gradient,
+//   className,
+// }: {
+//   children?: React.ReactNode;
+//   title: React.ReactNode;
+//   icon: React.ReactNode;
+//   gradient?: string;
+//   description: React.ReactNode;
+//   className?: string;
+// }) {
+//   return (
+//     <MovingGradient
+//       animated={false}
+//       className={cn("rounded-md", className)}
+//       gradientClassName={cn("opacity-10", gradient)}
+//     >
+//       <section className="flex h-full flex-col gap-2 p-4">
+//         <header>
+//           <div className="mb-2 flex items-center gap-2">
+//             {icon}
+//             <p className="text-md line-clamp-1 font-bold">{title}</p>
+//           </div>
+//         </header>
+//         <div className="flex-1 text-sm font-medium text-opacity-80">{description}</div>
+//         {children}
+//       </section>
+//     </MovingGradient>
+//   );
+// }
 
 export default function About() {
   // Refs for scroll animations
@@ -98,6 +94,7 @@ export default function About() {
   ];
 
   return (
+    <>
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
       <motion.div
         className="w-full max-w-8xl mx-auto"
@@ -426,7 +423,7 @@ export default function About() {
           </div>
           
           {/* Bento Grid Component from eight.tsx */}
-          <motion.div 
+          {/* <motion.div 
             ref={bentoGridRef}
             className="mt-16"
             initial="hidden"
@@ -505,9 +502,11 @@ export default function About() {
                 className="sm:col-span-2"
               />
             </div>
-          </motion.div>
+          </motion.div> */}
         </motion.div>
       </motion.div>
     </div>
+    <Footer/>
+    </>
   )
 }

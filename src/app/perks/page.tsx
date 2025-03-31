@@ -1,8 +1,8 @@
 import React from 'react';
 import BlurryBlob from "@/components/animata/background/blurry-blob";
-import MovingGradient from '@/components/animata/background/moving-gradient';
+// import MovingGradient from '@/components/animata/background/moving-gradient';
 import FlipCard from '@/components/animata/card/flip-card';
-import Image from 'next/image';
+import Footer from '@/components/footer';
 const PrizeMoney = () => {
     return (
       <>
@@ -37,6 +37,7 @@ const PrizeMoney = () => {
 
 
       </div>
+      <Footer/>
 </>
     );
 };

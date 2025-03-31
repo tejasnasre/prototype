@@ -2,9 +2,11 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Footer from '@/components/footer'
 
 export default function Timeline() {
   return (
+    <>
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
       <motion.div
         className="w-full max-w-8xl mx-auto"
@@ -113,5 +115,7 @@ export default function Timeline() {
         </motion.div>
       </motion.div>
     </div>
+    <Footer/>
+    </>
   )
 }
