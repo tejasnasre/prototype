@@ -1,45 +1,71 @@
 import React from 'react';
-import BlurryBlob from "@/components/animata/background/blurry-blob";
-// import MovingGradient from '@/components/animata/background/moving-gradient';
 import FlipCard from '@/components/animata/card/flip-card';
 import Footer from '@/components/footer';
+
 const PrizeMoney = () => {
-    return (
-      <>
-      <div className='flex flex-wrap justify-center h-dvh align-center p-20 m-5'>
-      <BlurryBlob
-  className="rounded-xl opacity-45"
-  firstBlobColor="bg-purple-400"
-  secondBlobColor="bg-blue-400"
-/>
+  return (
+    <>
+      <div className="relative flex flex-col items-center justify-center min-h-screen bg-gray-900 p-6 sm:p-10 lg:p-20">
         
-          <FlipCard
-          image="https://m.media-amazon.com/images/I/81U0xatrQzL._AC_SL1500_.jpg"
-          imageClassName='h-full w-full rounded-2xl object-cover shadow-2xl shadow-black/40 border-2 border-solid border-white'
-          rotate="y"
-          subtitle="1st-$$$$"
-          title="Cash Prizes"
-        />
-          <FlipCard
-          image="https://supabase.store/cdn/shop/products/supaverified-regular_600x.png?v=1696841559"
-          imageClassName="h-full w-full rounded-2xl object-cover shadow-2xl shadow-black/40 border-2 border-solid border-white"
-          rotate="y"
-          subtitle="For Best Use Of Supabase "
-          title="Supabase Swags"
-        />
-          <FlipCard
-          image= "/Microsoft_Azure.svg"
-          imageClassName=" h-full w-full object-contain flex justify-center items-center rounded-2xl object-cover shadow-2xl shadow-black/40 border-2 border-solid border-white"
-          rotate="y"
-          subtitle="For Best Beginner Team"
-          title="Azure Swags"
-        />
+        {/* Heading Section */}
+        <h1 className="relative z-10 text-center text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-8">
+          Amazing and hefty cash prize is waiting for you. <br />
+          <span className="text-blue-400">So get ready to Code, Build and Hack!</span>
+        </h1>
 
+        {/* Flip Cards Section */}
+        <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl justify-center items-center px-4">
+          <FlipCard
+            image="/money.jpg"
+            imageClassName="object-cover"
+            rotate="y"
+            subtitle="1st-$$$$"
+            title="Cash Prizes"
+            cardClassName="h-80 w-64"
+            fromColor="#4158D0"
+            viaColor="#C850C0"
+            toColor="#FFCC70"
+          />
+          <FlipCard
+            image="/supaverified-regular_600x.webp"
+            imageClassName="object-cover"
+            rotate="y"
+            subtitle="For Best Use Of Supabase"
+            title="Supabase Swags"
+            cardClassName="h-80 w-64"
+            fromColor="#6c63ff"
+            viaColor="#ff6584"
+            toColor="#63ffda"
+          />
+          <FlipCard
+            image="/Microsoft_Azure.svg"
+            imageClassName="object-contain"
+            rotate="y"
+            subtitle="For Best Beginner Team"
+            title="Azure Swags"
+            cardClassName="h-80 w-64"
+            fromColor="#63a1ff"
+            viaColor="#63ffda"
+            toColor="#ff63a1"
+          />
+        </div>
 
+        {/* Additional Header Text */}
+        <h2
+          className="relative z-10 mt-12 text-center text-2xl sm:text-3xl lg:text-4xl font-semibold text-transparent bg-clip-text"
+          style={{
+            background: "linear-gradient(to right, #4158D0, #C850C0)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+          }}
+        >
+          The journey doesn&apos;t end here! Join an exclusive community of developers, mentors, and tech enthusiasts. Build connections that last beyond the hackathon.
+        </h2>
       </div>
-      <Footer/>
-</>
-    );
+
+      <Footer />
+    </>
+  );
 };
 
 export default PrizeMoney;

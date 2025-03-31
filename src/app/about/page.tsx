@@ -7,8 +7,8 @@ import {
   HeartPulse, 
   Sun
 } from 'lucide-react'
-import MovingGradient from "@/components/animata/background/moving-gradient"
-import { cn } from "@/lib/utils"
+// import MovingGradient from "@/components/animata/background/moving-gradient"
+// import { cn } from "@/lib/utils"
 import Link from 'next/link'
 import { useRef } from 'react'
 import Footer from '@/components/footer'
