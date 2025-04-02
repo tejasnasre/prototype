@@ -53,14 +53,15 @@ export default function Timeline() {
                 {/* Timeline items */}
                 <div className="space-y-12">
                   {[
-                    { time: "9:00 AM", title: "Registration & Breakfast", description: "Check-in and get your participant kit" },
-                    { time: "10:00 AM", title: "Opening Ceremony", description: "Introduction and problem statement reveal" },
-                    { time: "10:30 AM", title: "Hacking Begins", description: "Start building your prototype" },
-                    { time: "1:00 PM", title: "Lunch Break", description: "Refuel with a delicious meal" },
+                    { time: "9:00 AM", title: "Registration & Check In", description: "Check-in and get your seats alloted" },
+                    { time: "9:30 AM", title: "Opening Ceremony", description: "Introduction and problem statement reveal" },
+                    { time: "10:00 AM", title: "Hacking Begins", description: "Start building your prototype" },
+                    { time: "1:00 PM", title: "Lunch Break", description: "Refuel with refreshments!! DW that's on us 😉" },
                     { time: "4:00 PM", title: "Midway Check-in", description: "Quick progress updates and mentorship" },
-                    { time: "6:30 PM", title: "Submissions Due", description: "Final code submission deadline" },
-                    { time: "7:00 PM", title: "Presentations", description: "Demo your prototype to judges" },
-                    { time: "8:30 PM", title: "Awards & Closing", description: "Winners announcement and networking" }
+                    { time: "6:00 PM", title: "Submissions Due", description: "Final code submission deadline. Yup Commits will be checked" },
+                    { time: "6:00 PM -7:00 PM", title: "Judging", description: "Demo your prototype to judges" },
+                    { time: "7:00 PM", title: "Closing Ceremony", description: "Winners announcement and vote of thanks" },
+                    { time: "TBA", title: "Awards Ceremony", description: "Award and Prize money distribution" }
                   ].map((item, i) => (
                     <motion.div 
                       key={i}

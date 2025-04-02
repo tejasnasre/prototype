@@ -17,7 +17,7 @@ export default function Home() {
     {
       id: 2,
       question: "When and where is it happening?",
-      answer: "It's happening on April 16th, 2025, at our campus. Exact venue details will be shared with registered participants.",
+      answer: "It's happening on April 16th, 2025, at GHRCEMN venue details will be shared with registered participants.",
       icon: "📍"
     },
     {
@@ -35,7 +35,7 @@ export default function Home() {
     {
       id: 5,
       question: "How many members can be in a team?",
-      answer: "Teams can have 1-4 members. Solo participants are also welcome!",
+      answer: "Teams can have 2-4 members.",
       icon: "👥"
     },
     {
@@ -111,7 +111,8 @@ export default function Home() {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6, delay: 0.8 }}
                     >
-                      <button className="
+                      <Link href="https://forms.gle/pSgJvv2jAqij9ZzR7">
+                      <button className="cursor-pointer
                         bg-gradient-to-r from-[#6c63ff] to-[#ff6584] 
                         px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg font-medium text-white 
                         hover:shadow-lg hover:shadow-[#6c63ff]/20 transition-all
@@ -121,6 +122,7 @@ export default function Home() {
                       ">
                         Register Now
                       </button>
+                      </Link>
                       <Link href="/about" className='w-full sm:w-auto'>
                       <button className="
                         backdrop-blur-sm bg-white/5 
@@ -223,11 +225,11 @@ export default function Home() {
                   <p className="text-white/60 text-xs sm:text-sm">Hours of Coding</p>
                 </div>
                 <div className="flex flex-col items-center justify-center text-center p-2">
-                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#ff6584]">500+</h3>
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#ff6584]">200+</h3>
                   <p className="text-white/60 text-xs sm:text-sm">Participants</p>
                 </div>
                 <div className="flex flex-col items-center justify-center text-center p-2">
-                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#43e97b]">10+</h3>
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#43e97b]">4+</h3>
                   <p className="text-white/60 text-xs sm:text-sm">Mentors</p>
                 </div>
                 <div className="flex flex-col items-center justify-center text-center p-2">
@@ -245,13 +247,13 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.2 }}
           >
-            <h3 className="text-lg sm:text-xl font-medium text-white/60 mb-4 sm:mb-6">Proudly Sponsored By</h3>
+            <h3 className="text-lg sm:text-xl font-medium text-white/60 mb-4 sm:mb-6">Our Swag Partners</h3>
             <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-8 md:gap-16">
               <div className="flex items-center justify-center p-2">
                 <Image 
                   src="/supabase-logo-wordmark--dark.svg"
                   alt="Supabase logo"
-                  width={160}
+                  width={140}
                   height={48}
                   className="h-8 sm:h-10 md:h-12 w-auto opacity-80 hover:opacity-100 transition-opacity"
                   priority
@@ -259,7 +261,7 @@ export default function Home() {
               </div>
               <div className="flex items-center justify-center p-2">
                 <Image 
-                  src="/Microsoft_Azure.svg"
+                  src="/azure.svg"
                   alt="Microsoft Azure logo"
                   width={160}
                   height={48}
@@ -270,165 +272,63 @@ export default function Home() {
             </div>
           </motion.div>
 
-          {/* Community Partners Marquee - Responsive sizing */}
-          <motion.div
-            className="mt-16 sm:mt-24 mb-12 sm:mb-16 text-center"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.4 }}
-          >
-            <h3 className="text-lg sm:text-xl font-medium text-white/60 mb-4 sm:mb-6">Community Partners</h3>
-            
-            {/* Marquee container with responsive sizing */}
-            <div className="relative overflow-hidden w-full max-w-full sm:max-w-3xl md:max-w-4xl lg:max-w-5xl mx-auto py-6 sm:py-10 before:absolute before:left-0 before:top-0 before:z-10 before:h-full before:w-16 before:bg-gradient-to-r before:from-[#030014] before:to-transparent after:absolute after:right-0 after:top-0 after:z-10 after:h-full after:w-16 after:bg-gradient-to-l after:from-[#030014] after:to-transparent">
-              <div 
-                className="flex animate-marquee items-center gap-10 sm:gap-16 md:gap-20 hover:pause-animation"
-                style={{
-                  animation: 'scroll 30s linear infinite',
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.animationPlayState = 'paused'}
-                onMouseLeave={(e) => e.currentTarget.style.animationPlayState = 'running'}
-              >
-                {/* Duplicate the logos to create a seamless loop */}
-                {[...Array(2)].map((_, index) => (
-                  <React.Fragment key={index}>
-                    <div className="flex-shrink-0 flex items-center justify-center">
-                      <Image 
-                        src="/LDLogo.svg" 
-                        alt="Community Partner 1" 
-                        width={160} 
-                        height={60}
-                        className="h-12 sm:h-16 md:h-20 w-auto opacity-90 hover:opacity-100 hover:scale-110 transition-all duration-300"
-                      />
-                    </div>
-                    <div className="flex-shrink-0 flex items-center justify-center">
-                      <Image 
-                        src="/nexmeet_black logo.png" 
-                        alt="Community Partner 2" 
-                        width={160} 
-                        height={60}
-                        className="h-12 sm:h-16 md:h-20 w-auto opacity-90 hover:opacity-100 hover:scale-110 transition-all duration-300"
-                      />
-                    </div>
-                    <div className="flex-shrink-0 flex items-center justify-center">
-                      <Image 
-                        src="/tcblogoremakeblackbg.png" 
-                        alt="Community Partner 3" 
-                        width={160} 
-                        height={60}
-                        className="h-12 sm:h-16 md:h-20 w-auto opacity-90 hover:opacity-100 hover:scale-110 transition-all duration-300"
-                      />
-                    </div>
-                    <div className="flex-shrink-0 flex items-center justify-center">
-                      <Image 
-                        src="/DevCult_Logo.jpg" 
-                        alt="Community Partner 4" 
-                        width={160} 
-                        height={60}
-                        className="h-12 sm:h-16 md:h-20 w-auto opacity-90 hover:opacity-100 hover:scale-110 transition-all duration-300"
-                      />
-                    </div>
-                  </React.Fragment>
-                ))}
-              </div>
-            </div>
-          </motion.div>
+          
         </div>
       </section>
       
       {/* About Section - Improved spacing and readability */}
-      <section className="py-12 sm:py-16 md:py-20">
-        <motion.div
-          className="w-full max-w-7xl mx-auto"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6 }}
-        >
-          <motion.h2 
-            className="text-2xl sm:text-3xl md:text-5xl font-bold mb-6 sm:mb-10 tracking-tight text-center"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            About <span className="gradient-text">Prototype</span> <span className="text-[#ff6584]">2.0</span>
-          </motion.h2>
-          
-          {/* Condensed About section */}
-          <motion.div 
-            className="relative overflow-hidden rounded-2xl sm:rounded-3xl p-1 mb-12"
-            style={{
-              background: "linear-gradient(135deg, #6c63ff 0%, #ff6584 100%)",
-            }}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-          >
-            <div className="absolute inset-0 bg-grid-pattern opacity-30"></div>
-            
-            <div className="bg-[#030014]/80 backdrop-blur-lg rounded-xl sm:rounded-2xl overflow-hidden relative z-10">
-              <div className="p-6 sm:p-8 md:p-12">
-                {/* About Text */}
-                <motion.div 
-                  className="flex flex-col justify-center space-y-4 sm:space-y-6 max-w-3xl mx-auto text-center"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.8, delay: 0.4 }}
-                >
-                  <motion.div
-                    className="inline-block px-3 sm:px-4 py-1 sm:py-1.5 mb-2 text-xs sm:text-sm font-medium rounded-full bg-white/5 border border-white/10 text-[#ff6584] mx-auto"
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.5 }}
-                  >
-                    8-Hour Challenge
-                  </motion.div>
-                  
-                  <motion.h3 
-                    className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-4 font-sans"
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.6 }}
-                  >
-                    Build a Prototype in Just 8 Hours
-                  </motion.h3>
-                  
-                  <motion.div 
-                    className="space-y-3 sm:space-y-4 text-white/80 text-base sm:text-lg"
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.7 }}
-                  >
-                    <p>
-                      <span className="text-[#6c63ff] font-semibold">Prototype 2.0</span> is our flagship hackathon taking place on April 16th, 2025, where participants build a working MVP based on a given problem statement in just 8 hours.
-                    </p>
-                    
-                    <p>
-                      The best solutions will win from our prize pool of <span className="font-semibold gradient-text">₹10,000</span> along with exclusive internship opportunities and tech goodies.
-                    </p>
-                  </motion.div>
-                  
-                  <motion.div
-                    className="pt-3 sm:pt-4"
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.9 }}
-                  >
-                    <Link href="/about">
-                      <button 
-                        className="bg-gradient-to-r from-[#6c63ff] to-[#ff6584] px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg font-medium text-white 
-                        hover:shadow-lg hover:shadow-[#6c63ff]/20 transition-all scale-100 hover:scale-105 duration-300
-                        border border-white/10 text-sm sm:text-base"
-                      >
-                        Learn More
-                      </button>
-                    </Link>
-                  </motion.div>
-                </motion.div>
-              </div>
-            </div>
-          </motion.div>
-        </motion.div>
-      </section>
+      {/* Community Partners - Static Grid Layout */}
+<motion.div
+  className="mt-16 sm:mt-24 mb-12 sm:mb-16 text-center"
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6, delay: 1.4 }}
+>
+  <h3 className="text-lg sm:text-xl font-medium text-white/60 mb-4 sm:mb-6">Community Partners</h3>
+  
+  {/* Static grid container */}
+  <div className="relative w-full max-w-5xl mx-auto py-6 sm:py-10">
+    {/* Logos grid - responsive from 2 columns on mobile to 4 on desktop */}
+    <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 md:gap-10 px-4">
+      <div className="flex items-center justify-center">
+        <Image 
+          src="/LDLogo.svg" 
+          alt="Community Partner 1" 
+          width={160} 
+          height={60}
+          className="h-12 sm:h-16 md:h-20 w-auto opacity-90 hover:opacity-100 hover:scale-110 transition-all duration-300"
+        />
+      </div>
+      <div className="flex items-center justify-center">
+        <Image 
+          src="/nexmeet_transparent.png" 
+          alt="Community Partner 2" 
+          width={160} 
+          height={60}
+          className="h-12 sm:h-16 md:h-20 w-auto opacity-90 hover:opacity-100 hover:scale-110 transition-all duration-300 object-contain"
+        />
+      </div>
+      <div className="flex items-center justify-center">
+        <Image 
+          src="/tcblogoremakeblackbg.png" 
+          alt="Community Partner 3" 
+          width={160} 
+          height={60}
+          className="h-12 sm:h-16 md:h-20 w-auto opacity-90 hover:opacity-100 hover:scale-110 transition-all duration-300"
+        />
+      </div>
+      <div className="flex items-center justify-center">
+        <Image 
+          src="/DevCult_Logo.jpg" 
+          alt="Community Partner 4" 
+          width={160} 
+          height={60}
+          className="h-12 sm:h-16 md:h-20 w-auto opacity-90 hover:opacity-100 hover:scale-110 transition-all duration-300"
+        />
+      </div>
+    </div>
+  </div>
+</motion.div>
       
       {/* FAQ Section */}
       <section id="faqs" className="py-12 sm:py-16 md:py-20">

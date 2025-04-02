@@ -146,7 +146,8 @@ const Navbar = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="hidden md:block"
             >
-              <button className="
+              <Link href="https://forms.gle/pSgJvv2jAqij9ZzR7" className="flex items-center">
+              <button className="cursor-pointer 
                 bg-gradient-to-r from-[#6c63ff] to-[#ff6584] 
                 px-5 py-2.5 rounded-lg font-medium text-white 
                 hover:shadow-lg hover:shadow-[#6c63ff]/20 transition-all
@@ -155,6 +156,7 @@ const Navbar = () => {
               ">
                 Register Now
               </button>
+              </Link>
             </motion.div>
 
             {/* Mobile menu button */}

@@ -38,21 +38,21 @@ export default function About() {
 
   // Past event images for the carousel
   const carouselItems = [
-    { id: 1, title: "Prototype 1.0", image: "/gallery/one.webp" },
-    { id: 2, title: "Coding Session", image: "/gallery/two.webp" },
-    { id: 3, title: "Team Collaboration", image: "/gallery/three.webp" },
-    { id: 4, title: "Presentation", image: "/gallery/four.webp" },
-    { id: 5, title: "Winners", image: "/gallery/five.webp" },
-    { id: 6, title: "Mentorship", image: "/gallery/six.webp" },
-    { id: 7, title: "Workshops", image: "/gallery/seven.webp" },
-    { id: 8, title: "Networking", image: "/gallery/eight.webp" },
-    { id: 9, title: "Prize Ceremony", image: "/gallery/nine.webp" },
-    { id: 10, title: "Team Building", image: "/gallery/ten.webp" },
-    { id: 11, title: "Brainstorming", image: "/gallery/eleven.webp" },
-    { id: 12, title: "Demo Day", image: "/gallery/twelve.webp" },
-    { id: 13, title: "Ideation", image: "/gallery/thirteen.webp" },
-    { id: 14, title: "Development", image: "/gallery/fourteen.webp" },
-    { id: 15, title: "Closing Ceremony", image: "/gallery/fifteen.webp" },
+    { id: 1, image: "/gallery/one.webp" },
+    { id: 2, image: "/gallery/three.webp" },
+    { id: 3, image: "/gallery/two.webp" },
+    { id: 4, image: "/gallery/four.webp" },
+    { id: 5, image: "/gallery/six.webp" },
+    { id: 6, image: "/gallery/six.webp" },
+    { id: 7, image: "/gallery/seven.webp" },
+    { id: 8, image: "/gallery/eight.webp" },
+    { id: 9, image: "/gallery/nine.webp" },
+    { id: 10, image: "/gallery/ten.webp" },
+    { id: 11, image: "/gallery/eleven.webp" },
+    { id: 12, image: "/gallery/twelve.webp" },
+    { id: 13, image: "/gallery/thirteen.webp" },
+    { id: 14, image: "/gallery/fourteen.webp" },
+    { id: 15, image: "/gallery/fifteen.webp" },
   ];
 
   return (
@@ -211,7 +211,7 @@ export default function About() {
                     </motion.li>
                   </motion.ul>
                 </motion.div>
-                
+                <Link href="https://forms.gle/pSgJvv2jAqij9ZzR7">
                 <motion.button 
                   className="bg-gradient-to-r from-[#ff6584] to-[#43e97b] px-6 sm:px-10 py-3 sm:py-4 rounded-lg font-medium text-white text-base sm:text-lg
                   hover:shadow-lg hover:shadow-[#ff6584]/20 transition-all scale-100 hover:scale-105 duration-300
@@ -225,6 +225,7 @@ export default function About() {
                 >
                   Register Now
                 </motion.button>
+                </Link>
               </motion.div>
               
               {/* Carousel below the text content - centered design */}
@@ -289,92 +290,94 @@ export default function About() {
               <div className="absolute inset-0 bg-grid-pattern opacity-20"></div>
                 
               <div className="relative z-10 bg-[#030014]/90 backdrop-blur-md rounded-xl p-8 md:p-10 lg:p-12">
-                <div className="flex flex-col gap-6">
-                  <div className="flex items-center gap-4">
-                    <div className="p-3 rounded-xl bg-gradient-to-br from-[#6c63ff] to-[#ff6584]">
-                      <ArrowRight size={28} className="text-white" />
-                    </div>
-                    <h4 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight">
-                      Transformative Experience
-                    </h4>
-                  </div>
-                
-                  <div className="mt-3 space-y-8">
-                    <motion.p 
-                      className="text-xl md:text-2xl lg:text-3xl leading-relaxed text-white/90"
-                      variants={{
-                        hidden: { opacity: 0, y: 20 },
-                        visible: { opacity: 1, y: 0 }
-                      }}
-                    >
-                      Prototype 2.0 isn&apos;t just a hackathon; it&apos;s an <span className="text-[#ff6584] font-semibold">immersive journey</span> where you&apos;ll push your limits, discover new capabilities, and forge lasting connections.
-                    </motion.p>
-                    
-                    <div className="grid md:grid-cols-2 gap-8">
-                      <motion.div 
-                        className="space-y-3"
-                        variants={{
-                          hidden: { opacity: 0, x: -20 },
-                          visible: { opacity: 1, x: 0 }
-                        }}
-                      >
-                        <div className="flex items-center gap-3">
-                          <HeartPulse className="text-[#43e97b]" size={24} />
-                          <h5 className="text-xl md:text-2xl font-semibold">Skill Development</h5>
-                        </div>
-                        <p className="text-lg md:text-xl text-white/70">
-                          Sharpen your technical and soft skills under pressure, a valuable asset for your future career.
-                        </p>
-                      </motion.div>
-                      
-                      <motion.div 
-                        className="space-y-3"
-                        variants={{
-                          hidden: { opacity: 0, x: 20 },
-                          visible: { opacity: 1, x: 0 }
-                        }}
-                      >
-                        <div className="flex items-center gap-3">
-                          <Sun className="text-[#ff6584]" size={24} />
-                          <h5 className="text-xl md:text-2xl font-semibold">Creative Problem Solving</h5>
-                        </div>
-                        <p className="text-lg md:text-xl text-white/70">
-                          Tackle real challenges with innovative approaches that can make a genuine impact.
-                        </p>
-                      </motion.div>
-                    </div>
-                  </div>
-                  
-                  <div className="flex flex-col sm:flex-row gap-6 mt-6 justify-center">
-                    <motion.button 
-                      className="px-8 py-4 rounded-lg bg-gradient-to-r from-[#6c63ff] to-[#ff6584] text-white font-medium text-lg"
-                      whileHover={{ scale: 1.05, boxShadow: "0 0 20px 0 rgba(108, 99, 255, 0.5)" }}
-                      variants={{
-                        hidden: { opacity: 0, y: 20 },
-                        visible: { opacity: 1, y: 0 }
-                      }}
-                    >
-                      Register Now
-                    </motion.button>
-                    
-                    <Link href="/timeline">
-                      <motion.button 
-                        className="px-8 py-4 rounded-lg bg-white/5 border border-white/10 text-white font-medium text-lg flex items-center gap-2 group"
-                        whileHover={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}
-                        variants={{
-                          hidden: { opacity: 0, y: 20 },
-                          visible: { opacity: 1, y: 0 }
-                        }}
-                      >
-                        <svg className="w-5 h-5 group-hover:animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        View Timeline
-                      </motion.button>
-                    </Link>
-                  </div>
-                </div>
-              </div>
+  <div className="flex flex-col gap-6">
+    <div className="flex items-center gap-4">
+      <div className="p-3 rounded-xl bg-gradient-to-br from-[#6c63ff] to-[#ff6584]">
+        <ArrowRight size={28} className="text-white" />
+      </div>
+      <h4 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight">
+        Real Success Stories
+      </h4>
+    </div>
+  
+    <div className="mt-3 space-y-8">
+      <motion.p 
+        className="text-xl md:text-2xl lg:text-3xl leading-relaxed text-white/90"
+        variants={{
+          hidden: { opacity: 0, y: 20 },
+          visible: { opacity: 1, y: 0 }
+        }}
+      >
+        In our previous hackathon, we had <span className="text-[#ff6584] font-semibold">two winning teams</span> with the first place winner securing an <span className="text-[#43e97b] font-semibold">internship at TARS TECHNOLOGIES Nagpur</span>. Prototype isn&apos;t just an event—it&apos;s a career launchpad.
+      </motion.p>
+      
+      <div className="grid md:grid-cols-2 gap-8">
+        <motion.div 
+          className="space-y-3"
+          variants={{
+            hidden: { opacity: 0, x: -20 },
+            visible: { opacity: 1, x: 0 }
+          }}
+        >
+          <div className="flex items-center gap-3">
+            <HeartPulse className="text-[#43e97b]" size={24} />
+            <h5 className="text-xl md:text-2xl font-semibold">Career Opportunities</h5>
+          </div>
+          <p className="text-lg md:text-xl text-white/70">
+            Showcase your skills to potential employers and open doors to internships and job offers.
+          </p>
+        </motion.div>
+        
+        <motion.div 
+          className="space-y-3"
+          variants={{
+            hidden: { opacity: 0, x: 20 },
+            visible: { opacity: 1, x: 0 }
+          }}
+        >
+          <div className="flex items-center gap-3">
+            <Sun className="text-[#ff6584]" size={24} />
+            <h5 className="text-xl md:text-2xl font-semibold">Recognition & Rewards</h5>
+          </div>
+          <p className="text-lg md:text-xl text-white/70">
+            Win prizes and earn recognition for your innovative solutions to real-world problems.
+          </p>
+        </motion.div>
+      </div>
+    </div>
+    
+    <div className="flex flex-col sm:flex-row gap-6 mt-6 justify-center">
+      <Link href="https://forms.gle/pSgJvv2jAqij9ZzR7">
+      <motion.button 
+        className="px-8 py-4 rounded-lg bg-gradient-to-r from-[#6c63ff] to-[#ff6584] text-white font-medium text-lg"
+        whileHover={{ scale: 1.05, boxShadow: "0 0 20px 0 rgba(108, 99, 255, 0.5)" }}
+        variants={{
+          hidden: { opacity: 0, y: 20 },
+          visible: { opacity: 1, y: 0 }
+        }}
+      >
+        Register Now
+      </motion.button>
+      </Link>
+      
+      <Link href="/timeline">
+        <motion.button 
+          className="px-8 py-4 rounded-lg bg-white/5 border border-white/10 text-white font-medium text-lg flex items-center gap-2 group"
+          whileHover={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}
+          variants={{
+            hidden: { opacity: 0, y: 20 },
+            visible: { opacity: 1, y: 0 }
+          }}
+        >
+          <svg className="w-5 h-5 group-hover:animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          View Timeline
+        </motion.button>
+      </Link>
+    </div>
+  </div>
+</div>
             </div>
           </div>
         </motion.div>

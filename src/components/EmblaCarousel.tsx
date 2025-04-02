@@ -6,7 +6,6 @@ import Image from 'next/image'
 
 type CarouselItem = {
   id: number
-  title: string
   image: string
 }
 
@@ -51,7 +50,7 @@ export default function EmblaCarousel({ items }: EmblaCarouselProps) {
               <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
                 <Image
                   src={item.image}
-                  alt={item.title}
+                  alt='nothing'
                   fill
                   priority
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -59,7 +58,6 @@ export default function EmblaCarousel({ items }: EmblaCarouselProps) {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                 <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <h3 className="text-lg sm:text-xl font-bold">{item.title}</h3>
                 </div>
               </div>
             </div>

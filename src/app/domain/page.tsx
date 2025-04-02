@@ -168,7 +168,7 @@ export default function DomainPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          Choose from a variety of cutting-edge tech domains for Prototype 2.0
+          Choose any domain we ain&apos;t biased at all.. you got freedom!!
         </motion.p>
       </motion.div>
 
