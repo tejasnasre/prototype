@@ -277,7 +277,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.2 }}
           >
-            <h3 className="text-lg sm:text-xl font-medium text-white/60 mb-4 sm:mb-6">Our Swag Partners</h3>
+            <h3 className="text-lg sm:text-xl font-medium text-white/60 mb-4 sm:mb-6">Our Swag Partner</h3>
             <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-8 md:gap-16">
               <div className="flex items-center justify-center p-2">
                 <Image 
@@ -289,7 +289,7 @@ export default function Home() {
                   priority
                 />
               </div>
-              <div className="flex items-center justify-center p-2">
+              {/* <div className="flex items-center justify-center p-2">
                 <Image 
                   src="/azure.svg"
                   alt="Microsoft Azure logo"
@@ -298,7 +298,7 @@ export default function Home() {
                   className="h-8 sm:h-10 md:h-12 w-auto opacity-80 hover:opacity-100 transition-opacity"
                   priority
                 />
-              </div>
+              </div> */}
             </div>
           </motion.div>
 

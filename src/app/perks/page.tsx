@@ -38,11 +38,11 @@ const PrizeMoney = () => {
             toColor="#63ffda"
           />
           <FlipCard
-            image="/Microsoft_Azure.svg"
-            imageClassName="object-contain bg-white/90 rounded-lg p-2"
+            image="/networking.jpg"
+            imageClassName="object-cover rounded-lg"
             rotate="y"
-            subtitle="For Best Beginner Team"
-            title="Azure Swags"
+            subtitle="Connect with Industry Professionals"
+            title="Networking Opportunities"
             cardClassName="h-72 w-full max-w-[280px]"
             fromColor="#63a1ff"
             viaColor="#63ffda"
