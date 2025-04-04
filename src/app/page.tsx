@@ -16,34 +16,64 @@ export default function Home() {
     },
     {
       id: 2,
+      question: "Who can participate?",
+      answer: "Anyone with a passion for coding and problem-solving can participate. Whether you're a student, professional, or hobbyist, we welcome you!",
+      icon: "👩‍💻"
+    },
+    {
+      id: 3,
       question: "When and where is it happening?",
       answer: "It's happening on April 16th, 2025, at GHRCEMN venue details will be shared with registered participants.",
       icon: "📍"
     },
     {
-      id: 3,
+      id: 4,
       question: "How do I register for the hackathon?",
       answer: "Click on the 'Register Now' button on our website and fill out the registration form.",
       icon: "✍️"
     },
     {
-      id: 4,
+      id: 5,
       question: "Is there an entry fee?",
       answer: "Yup 300 rupees per team is the entry fee.",
       icon: "💸"
     },
     {
-      id: 5,
-      question: "How many members can be in a team?",
-      answer: "Teams can have 2-4 members.",
+      id: 6,
+      question: "How many members can be there in a team?",
+      answer: "Teams can have 1-4 members.",
       icon: "👥"
     },
     {
-      id: 6,
-      question: "What are the prizes?",
+      id: 7,
+      question: "What do we need to get for the hackathon?",
+      answer: "Nothing much folks, just bring your laptop with charger, extension board (if you got any or else we will provide you), and your creativity fs.",
+      icon: "🤔"
+    },
+    {
+      id: 8,
+      question: "What are the perks?",
       answer: "The total prize pool is ₹10,000, along with internship opportunities and tech goodies for winners.",
       icon: "🏆"
-    }
+    },
+    {
+      id: 9,
+      question: "Are we getting something to eat or no?",
+      answer: "DW folks we got you covered, we will provide you with something lighter to eat if you want to bring in your own snacks and lunchbox feel free too.",
+      icon: "🍽"
+    },
+    {
+      id: 10,
+      question: "What's gonna be the judging criteria and how will it be done?",
+      answer: "The judging criteria will be based on creativity, functionality, and presentation of the prototype. We will have a panel of judges who will evaluate the projects.",
+      icon: "🔎"
+    },
+    {
+      id: 11,
+      question: "How is prototype team gonna ensure credibility of the event?",
+      answer: "As someone who has participated in multiple hackathons and also won 2 of them I (Soham) promise you there will be complete transparency maintained in the event and the judging process. NO BS and biasedness.",
+      icon: "🤝"
+    },
   ]
   
   return (
